@@ -1,0 +1,37 @@
+/*@charset "UTF-8";*/
+.header{
+    height: 50px;
+    width: 100%;
+    background-color: blanchedalmond;
+}
+
+.header h1{
+    height: 100px;
+    width: 600px;
+    color: black;
+    font-family: "游明朝", YuMincho, "ヒラギノ明朝 ProN W3", "Hiragino Mincho ProN", "HG明朝E", "ＭＳ Ｐ明朝", "ＭＳ 明朝", serif;
+}
+
+.explain{
+    height: 400px;
+    display: block;
+    float: left;
+    text-align: center;
+}
+
+.mid{
+    width: 280px;
+    display: block;
+    background-color: aqua;
+    float: left;
+}
+
+.sports{
+    height: 400px;
+    display: block;
+}
+.title{
+    height: 30px;
+    width: 100%;
+    display: block;
+}
