@@ -1,0 +1,43 @@
+<html>
+    <head>
+        <title>書き込めるやつ</title>
+        <meta charset="utf-8">
+        <link rel="stylesheet" type="text/css" media="only screen and (max-device-width:480px)" href="../phone-sub.css"/>
+        <link rel="stylesheet" type="text/css" media="screen and (min-device-width:481px)" href="../sub.css" />
+    </head>
+    <body>
+        <header>
+            <div class="menu">
+                <div id="target" onmouseover="over(this)" onmouseleave="leave(this)"><a href="../index.html">HOME</a></div>
+                <div id="target" onmouseover="over(this)" onmouseleave="leave(this)"><a href="../競プロとは？.html">競プロってなんぞ？</a></div>
+                <div id="target" onmouseover="over(this)" onmouseleave="leave(this)"><a href="../活動内容.html">活動内容</a></div>
+                <div id="target" onmouseover="over(this)" onmouseleave="leave(this)"><a href="../メンバー.html">メンバー紹介</a></div>
+                <div id="target" onmouseover="over(this)" onmouseleave="leave(this)"><a href="https://github.com/shiga-kyopuro">GitHub</a></div>
+                <div id="this"><a href="../kakikomi.html">作品</a></div> 
+            </div>
+        </header>
+        <div class="space"></div>
+        <div class="left"></div>
+        <div class="mid">
+            <form action="https://shiga-kyopuro.000webhostapp.com/form.php" method="POST">
+                <p>内容： <input name="content"></p>
+            </form>
+            <OBJECT DATA="https://shiga-kyopuro.000webhostapp.com/form.txt" TYPE="text/plain" WIDTH="100%" HEIGHT="550px"></OBJECT>
+        </div>
+        <footer>
+            <script type='text/javascript'>
+                var date = new Date();
+                document.write(date.getFullYear()+'  滋賀大学競技プログラミングサークル')
+            </script>
+        </footer>
+        <script type="text/javascript">
+            function over(x) {
+                x.style.backgroundColor = "gray";
+            }
+ 
+            function leave(x) {
+                x.style.backgroundColor = "#222";
+            }
+        </script>
+    </body>
+</html>
