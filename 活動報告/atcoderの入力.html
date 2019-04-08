@@ -8456,10 +8456,12 @@ model layouts accross multiple browsers, including older browsers.  The newest,
 universal implementation of the flexible box model is used when available (see
 `Modern browsers` comments below).  Browsers that are known to implement this 
 new spec completely include:
+
     Firefox 28.0+
     Chrome 29.0+
     Internet Explorer 11+ 
     Opera 17.0+
+
 Browsers not listed, including Safari, are supported via the styling under the
 `Old browsers` comments below.
 */
@@ -9752,8 +9754,10 @@ div.input_area > div.highlight > pre {
   border-radius: 0;
 }
 /*
+
 Original style from softwaremaniacs.org (c) Ivan Sagalaev <Maniac@SoftwareManiacs.Org>
 Adapted from GitHub theme
+
 */
 .highlight-base {
   color: #000;
@@ -11706,7 +11710,9 @@ ul.typeahead-list > li > a {
 .ansi-white-bg { background-color: #C5C1B4; }
 .ansi-white-intense-fg { color: #A1A6B2; }
 .ansi-white-intense-bg { background-color: #A1A6B2; }
+
 .ansi-bold { font-weight: bold; }
+
     </style>
 
 
@@ -11716,6 +11722,7 @@ body {
   overflow: visible;
   padding: 8px;
 }
+
 div#notebook {
   overflow: visible;
   border-top: none;
@@ -11775,16 +11782,143 @@ div#notebook {
 </div>
 </div>
 </div>
+<div class="cell border-box-sizing text_cell rendered"><div class="prompt input_prompt">
+</div>
+<div class="inner_cell">
+<div class="text_cell_render border-box-sizing rendered_html">
+<p>始めに、この資料で使うpythonの関数についての挙動を確認しておきます。</p>
+
+</div>
+</div>
+</div>
+<div class="cell border-box-sizing text_cell rendered"><div class="prompt input_prompt">
+</div>
+<div class="inner_cell">
+<div class="text_cell_render border-box-sizing rendered_html">
+<p><strong>split(文字列)</strong><br>
+文字列型のメソッド。カッコ内の文字で区切ってリストを返す。初期値は空白<br>
+<strong>map(関数,タプル、リストなど)</strong><br>
+第二引数のタプル、リストなどの要素を一つずつ取り出して第一引数に渡した関数に入れたイテレータを返す<br>
+<strong>[なんかの処理 for i in タプル、リストなど]</strong><br>
+リスト内包表記と呼ばれる。タプル、リストなどを一つずつ取り出してなんかの処理を行いリストに追加する…みたいな挙動をする。ちょっと難しいのでググってください。<br></p>
+
+</div>
+</div>
+</div>
 <div class="cell border-box-sizing code_cell rendered">
 <div class="input">
 <div class="prompt input_prompt">In&nbsp;[1]:</div>
 <div class="inner_cell">
     <div class="input_area">
+<div class=" highlight hl-ipython3"><pre><span></span><span class="c1">#split()の挙動</span>
+<span class="nb">print</span><span class="p">(</span><span class="s1">&#39;1 2 3 4 5&#39;</span><span class="o">.</span><span class="n">split</span><span class="p">())</span>
+<span class="nb">print</span><span class="p">(</span><span class="s1">&#39;a/b/c/d/e&#39;</span><span class="o">.</span><span class="n">split</span><span class="p">(</span><span class="s1">&#39;/&#39;</span><span class="p">))</span>
+<span class="nb">print</span><span class="p">(</span><span class="s1">&#39;A,B,C,D,E&#39;</span><span class="o">.</span><span class="n">split</span><span class="p">(</span><span class="s1">&#39;,&#39;</span><span class="p">))</span>
+</pre></div>
+
+</div>
+</div>
+</div>
+
+<div class="output_wrapper">
+<div class="output">
+
+
+<div class="output_area">
+
+<div class="prompt"></div>
+
+
+<div class="output_subarea output_stream output_stdout output_text">
+<pre>[&#39;1&#39;, &#39;2&#39;, &#39;3&#39;, &#39;4&#39;, &#39;5&#39;]
+[&#39;a&#39;, &#39;b&#39;, &#39;c&#39;, &#39;d&#39;, &#39;e&#39;]
+[&#39;A&#39;, &#39;B&#39;, &#39;C&#39;, &#39;D&#39;, &#39;E&#39;]
+</pre>
+</div>
+</div>
+
+</div>
+</div>
+
+</div>
+<div class="cell border-box-sizing code_cell rendered">
+<div class="input">
+<div class="prompt input_prompt">In&nbsp;[2]:</div>
+<div class="inner_cell">
+    <div class="input_area">
+<div class=" highlight hl-ipython3"><pre><span></span><span class="c1">#map()の挙動</span>
+<span class="nb">print</span><span class="p">(</span><span class="nb">map</span><span class="p">(</span><span class="nb">int</span><span class="p">,(</span><span class="s1">&#39;1&#39;</span><span class="p">,</span><span class="s1">&#39;2&#39;</span><span class="p">,</span><span class="s1">&#39;3&#39;</span><span class="p">,</span><span class="s1">&#39;4&#39;</span><span class="p">,</span><span class="s1">&#39;5&#39;</span><span class="p">)))</span>
+<span class="nb">print</span><span class="p">(</span><span class="nb">list</span><span class="p">(</span><span class="nb">map</span><span class="p">(</span><span class="nb">int</span><span class="p">,(</span><span class="s1">&#39;1&#39;</span><span class="p">,</span><span class="s1">&#39;2&#39;</span><span class="p">,</span><span class="s1">&#39;3&#39;</span><span class="p">,</span><span class="s1">&#39;4&#39;</span><span class="p">,</span><span class="s1">&#39;5&#39;</span><span class="p">))))</span>
+</pre></div>
+
+</div>
+</div>
+</div>
+
+<div class="output_wrapper">
+<div class="output">
+
+
+<div class="output_area">
+
+<div class="prompt"></div>
+
+
+<div class="output_subarea output_stream output_stdout output_text">
+<pre>&lt;map object at 0x00000268A23A6F60&gt;
+[1, 2, 3, 4, 5]
+</pre>
+</div>
+</div>
+
+</div>
+</div>
+
+</div>
+<div class="cell border-box-sizing code_cell rendered">
+<div class="input">
+<div class="prompt input_prompt">In&nbsp;[3]:</div>
+<div class="inner_cell">
+    <div class="input_area">
+<div class=" highlight hl-ipython3"><pre><span></span><span class="c1">#リスト内包表記の挙動</span>
+<span class="nb">print</span><span class="p">([</span><span class="nb">int</span><span class="p">(</span><span class="n">i</span><span class="p">)</span> <span class="k">for</span> <span class="n">i</span> <span class="ow">in</span> <span class="p">(</span><span class="s1">&#39;1&#39;</span><span class="p">,</span><span class="s1">&#39;2&#39;</span><span class="p">,</span><span class="s1">&#39;3&#39;</span><span class="p">,</span><span class="s1">&#39;4&#39;</span><span class="p">,</span><span class="s1">&#39;5&#39;</span><span class="p">)])</span>
+<span class="nb">print</span><span class="p">([</span><span class="mi">0</span> <span class="k">for</span> <span class="n">i</span> <span class="ow">in</span> <span class="p">(</span><span class="mi">1</span><span class="p">,</span><span class="mi">2</span><span class="p">,</span><span class="mi">3</span><span class="p">,</span><span class="mi">4</span><span class="p">,</span><span class="mi">5</span><span class="p">)])</span>
+</pre></div>
+
+</div>
+</div>
+</div>
+
+<div class="output_wrapper">
+<div class="output">
+
+
+<div class="output_area">
+
+<div class="prompt"></div>
+
+
+<div class="output_subarea output_stream output_stdout output_text">
+<pre>[1, 2, 3, 4, 5]
+[0, 0, 0, 0, 0]
+</pre>
+</div>
+</div>
+
+</div>
+</div>
+
+</div>
+<div class="cell border-box-sizing code_cell rendered">
+<div class="input">
+<div class="prompt input_prompt">In&nbsp;[4]:</div>
+<div class="inner_cell">
+    <div class="input_area">
 <div class=" highlight hl-ipython3"><pre><span></span><span class="c1">#一つの文字の入力</span>
-<span class="n">char</span> <span class="o">=</span> <span class="nb">input</span><span class="p">()</span>
+<span class="n">char</span> <span class="o">=</span> <span class="nb">input</span><span class="p">(</span><span class="s1">&#39;入力&gt;&gt;&#39;</span><span class="p">)</span>
 <span class="nb">print</span><span class="p">(</span><span class="n">char</span><span class="p">)</span>
 <span class="c1">#一つの数字の入力</span>
-<span class="n">num</span> <span class="o">=</span> <span class="nb">int</span><span class="p">(</span><span class="nb">input</span><span class="p">())</span> <span class="c1">#input()で入力を受け取ってint()で数字型に変換します。</span>
+<span class="n">num</span> <span class="o">=</span> <span class="nb">int</span><span class="p">(</span><span class="nb">input</span><span class="p">(</span><span class="s1">&#39;入力&gt;&gt;&#39;</span><span class="p">))</span> <span class="c1">#input()で入力を受け取ってint()で数字型に変換します。</span>
 <span class="nb">print</span><span class="p">(</span><span class="n">num</span><span class="p">)</span>
 </pre></div>
 
@@ -11858,7 +11992,72 @@ div#notebook {
 </div>
 <div class="cell border-box-sizing code_cell rendered">
 <div class="input">
-<div class="prompt input_prompt">In&nbsp;[2]:</div>
+<div class="prompt input_prompt">In&nbsp;[5]:</div>
+<div class="inner_cell">
+    <div class="input_area">
+<div class=" highlight hl-ipython3"><pre><span></span><span class="c1">#一つ目</span>
+<span class="n">ls</span> <span class="o">=</span> <span class="p">[]</span>
+<span class="k">for</span> <span class="n">i</span> <span class="ow">in</span> <span class="nb">input</span><span class="p">()</span><span class="o">.</span><span class="n">split</span><span class="p">():</span>
+    <span class="n">ls</span><span class="o">.</span><span class="n">append</span><span class="p">(</span><span class="nb">int</span><span class="p">(</span><span class="n">i</span><span class="p">))</span>
+<span class="nb">print</span><span class="p">(</span><span class="n">ls</span><span class="p">)</span>
+<span class="c1">#二つ目</span>
+<span class="n">ls</span> <span class="o">=</span> <span class="nb">list</span><span class="p">(</span><span class="nb">map</span><span class="p">(</span><span class="nb">int</span><span class="p">,</span><span class="nb">input</span><span class="p">()</span><span class="o">.</span><span class="n">split</span><span class="p">()))</span>
+<span class="nb">print</span><span class="p">(</span><span class="n">ls</span><span class="p">)</span>
+</pre></div>
+
+</div>
+</div>
+</div>
+
+<div class="output_wrapper">
+<div class="output">
+
+
+<div class="output_area">
+
+<div class="prompt"></div>
+
+
+
+</div>
+
+<div class="output_area">
+
+<div class="prompt"></div>
+
+
+<div class="output_subarea output_stream output_stdout output_text">
+<pre>[1, 2, 3, 4, 5]
+</pre>
+</div>
+</div>
+
+<div class="output_area">
+
+<div class="prompt"></div>
+
+
+
+</div>
+
+<div class="output_area">
+
+<div class="prompt"></div>
+
+
+<div class="output_subarea output_stream output_stdout output_text">
+<pre>[1, 2, 3, 4, 5]
+</pre>
+</div>
+</div>
+
+</div>
+</div>
+
+</div>
+<div class="cell border-box-sizing code_cell rendered">
+<div class="input">
+<div class="prompt input_prompt">In&nbsp;[6]:</div>
 <div class="inner_cell">
     <div class="input_area">
 <div class=" highlight hl-ipython3"><pre><span></span><span class="c1">#空白切り一行で複数の数字が入力される場合</span>
@@ -11879,14 +12078,14 @@ div#notebook {
 <span class="n">ls</span> <span class="o">=</span> <span class="p">[]</span>                         <span class="c1">#データを入れるリスト</span>
 <span class="k">for</span> <span class="n">i</span> <span class="ow">in</span> <span class="n">input_data</span><span class="o">.</span><span class="n">split</span><span class="p">():</span>
     <span class="n">ls</span><span class="o">.</span><span class="n">append</span><span class="p">(</span><span class="nb">int</span><span class="p">(</span><span class="n">i</span><span class="p">))</span>
-<span class="nb">print</span><span class="p">(</span><span class="n">ls</span><span class="p">[:</span><span class="mi">5</span><span class="p">])</span>                   <span class="c1">#数字が大きいので５つだけ出力</span>
+<span class="nb">print</span><span class="p">(</span><span class="n">ls</span><span class="p">[:</span><span class="mi">5</span><span class="p">])</span>                   <span class="c1">#数字が多いので５つだけ出力</span>
 <span class="nb">print</span><span class="p">(</span><span class="s1">&#39;一つ目の方法:&#39;</span> <span class="o">+</span> <span class="nb">str</span><span class="p">(</span><span class="n">datetime</span><span class="o">.</span><span class="n">datetime</span><span class="o">.</span><span class="n">now</span><span class="p">()</span> <span class="o">-</span> <span class="n">now</span><span class="p">))</span>
 
 
 <span class="c1">#二つ目 (入力をmapという関数に入れて一行で入力した場合)</span>
 <span class="n">now</span> <span class="o">=</span> <span class="n">datetime</span><span class="o">.</span><span class="n">datetime</span><span class="o">.</span><span class="n">now</span><span class="p">()</span>
 <span class="n">ls</span> <span class="o">=</span> <span class="nb">list</span><span class="p">(</span><span class="nb">map</span><span class="p">(</span><span class="nb">int</span><span class="p">,</span><span class="n">input_data</span><span class="o">.</span><span class="n">split</span><span class="p">()))</span>
-<span class="nb">print</span><span class="p">(</span><span class="n">ls</span><span class="p">[:</span><span class="mi">5</span><span class="p">])</span>                    <span class="c1">#数字が大きいので5つだけ出力</span>
+<span class="nb">print</span><span class="p">(</span><span class="n">ls</span><span class="p">[:</span><span class="mi">5</span><span class="p">])</span>                    <span class="c1">#数字が多いので5つだけ出力</span>
 <span class="nb">print</span><span class="p">(</span><span class="s1">&#39;二つ目の方法:&#39;</span> <span class="o">+</span> <span class="nb">str</span><span class="p">(</span><span class="n">datetime</span><span class="o">.</span><span class="n">datetime</span><span class="o">.</span><span class="n">now</span><span class="p">()</span> <span class="o">-</span> <span class="n">now</span><span class="p">))</span>
 </pre></div>
 
@@ -11905,9 +12104,9 @@ div#notebook {
 
 <div class="output_subarea output_stream output_stdout output_text">
 <pre>[1, 2, 3, 4, 5]
-一つ目の方法:0:00:00.181344
+一つ目の方法:0:00:00.167308
 [1, 2, 3, 4, 5]
-二つ目の方法:0:00:00.098430
+二つ目の方法:0:00:00.109349
 </pre>
 </div>
 </div>
@@ -11920,9 +12119,7 @@ div#notebook {
 </div>
 <div class="inner_cell">
 <div class="text_cell_render border-box-sizing rendered_html">
-<p>一つ目の方法と二つ目の方法、実行時間はおよそ1.5倍の差がありますね。これはpythonでfor文を使うと一度ループさせるたびに
-機械が扱いやすい言語に翻訳する作業を行うためにこれだけの差が出ています。入力だけでなくともforやwhileを使わずに
-目的を達成できるならば、できるだけ避けたほうがいいでしょう。</p>
+<p>一つ目の方法と二つ目の方法、実行時間はおよそ1.5倍の差がありますね。一つ目の方法ではappendという関数を入力毎に呼び出しているため時間がかがっています。一つ目の方法で速度を改善する方法があるにはあるんですが、速度に利がありコンパクトにまとまる後者を使うといいと思います。</p>
 
 </div>
 </div>
@@ -11931,22 +12128,31 @@ div#notebook {
 </div>
 <div class="inner_cell">
 <div class="text_cell_render border-box-sizing rendered_html">
-<p>結論として、一行に複数の数字が与えられた場合には
-list(map(int,input().split()))
+<p>結論として、一行に複数の数字が与えられた場合には<br>
+<strong>list(map(int,input().split()))</strong><br>
 を使用するといいでしょう。</p>
 
 </div>
 </div>
-</div>次に、縦向きに複数の数字が入力された場合を考えます。例えば、
-1
-2
-3
-4
-5
-みたいな感じで。このように入力が渡された場合に関しても、二つの方法を提示します。
+</div>
+<div class="cell border-box-sizing text_cell rendered"><div class="prompt input_prompt">
+</div>
+<div class="inner_cell">
+<div class="text_cell_render border-box-sizing rendered_html">
+<p>次に、１行ごとに複数の数字が入力された場合を考えます。例えば、 <br>
+1<br>
+2<br>
+3<br>
+4<br>
+5<br>
+みたいな感じで。このように入力が渡された場合に関しても、二つの方法を提示します。</p>
+
+</div>
+</div>
+</div>
 <div class="cell border-box-sizing code_cell rendered">
 <div class="input">
-<div class="prompt input_prompt">In&nbsp;[3]:</div>
+<div class="prompt input_prompt">In&nbsp;[7]:</div>
 <div class="inner_cell">
     <div class="input_area">
 <div class=" highlight hl-ipython3"><pre><span></span><span class="c1">#一つ目</span>
@@ -12012,11 +12218,11 @@ list(map(int,input().split()))
 </div>
 <div class="cell border-box-sizing code_cell rendered">
 <div class="input">
-<div class="prompt input_prompt">In&nbsp;[4]:</div>
+<div class="prompt input_prompt">In&nbsp;[8]:</div>
 <div class="inner_cell">
     <div class="input_area">
 <div class=" highlight hl-ipython3"><pre><span></span><span class="sd">&#39;&#39;&#39;</span>
-<span class="sd">改行切り一行で複数の数字が入力される場合</span>
+<span class="sd">１行ごとに複数の数字が入力される場合</span>
 <span class="sd">1</span>
 <span class="sd">2</span>
 <span class="sd">3</span>
@@ -12065,9 +12271,9 @@ list(map(int,input().split()))
 
 <div class="output_subarea output_stream output_stdout output_text">
 <pre>[1, 2, 3, 4, 5]
-一つ目:0:00:00.261435
+一つ目:0:00:00.236869
 [1, 2, 3, 4, 5]
-二つ目:0:00:00.187456
+二つ目:0:00:00.177120
 </pre>
 </div>
 </div>
@@ -12090,19 +12296,30 @@ list(map(int,input().split()))
 </div>
 <div class="inner_cell">
 <div class="text_cell_render border-box-sizing rendered_html">
-<p>結論として改行区切りで数字が与えられた場合は[int(input()) for i in range(入力の数)]を使うといいでしょう。入力の数は入力の最初に与えられる場合が多いです。</p>
+<p>結論として１行ごとに複数の数字が与えられた場合は<br>
+<strong>[int(input()) for i in range(入力の数)]</strong><br>
+を使うといいでしょう。入力の数は入力の最初に与えられる場合が多いです。</p>
 
 </div>
 </div>
-</div>次に、これまでの二つを組み合わせて、
-1 2 3 4 5
-6 7 8 9 10
-11 12 13 14 15
-16 17 18 19 20
-のような入力を受け取ってみます。
+</div>
+<div class="cell border-box-sizing text_cell rendered"><div class="prompt input_prompt">
+</div>
+<div class="inner_cell">
+<div class="text_cell_render border-box-sizing rendered_html">
+<p>次に、これまでの二つを組み合わせて、<br>
+1 2 3 4 5<br>
+6 7 8 9 10<br>
+11 12 13 14 15<br>
+16 17 18 19 20<br>
+のような入力を受け取ってみます。</p>
+
+</div>
+</div>
+</div>
 <div class="cell border-box-sizing code_cell rendered">
 <div class="input">
-<div class="prompt input_prompt">In&nbsp;[5]:</div>
+<div class="prompt input_prompt">In&nbsp;[9]:</div>
 <div class="inner_cell">
     <div class="input_area">
 <div class=" highlight hl-ipython3"><pre><span></span><span class="n">ls</span> <span class="o">=</span> <span class="p">[</span><span class="nb">list</span><span class="p">(</span><span class="nb">map</span><span class="p">(</span><span class="nb">int</span><span class="p">,</span><span class="nb">input</span><span class="p">()</span><span class="o">.</span><span class="n">split</span><span class="p">()))</span> <span class="k">for</span> <span class="n">i</span> <span class="ow">in</span> <span class="nb">range</span><span class="p">(</span><span class="mi">4</span><span class="p">)]</span>
@@ -12139,12 +12356,30 @@ list(map(int,input().split()))
 </div>
 </div>
 
-</div>これらを使うと様々な入力形式に対応できます。例えば
-'apple' 'banana' 'orange'
-が与えられた時は
+</div>
+<div class="cell border-box-sizing text_cell rendered"><div class="prompt input_prompt">
+</div>
+<div class="inner_cell">
+<div class="text_cell_render border-box-sizing rendered_html">
+<p>これらを使うと様々な入力形式に対応できます。</p>
+
+</div>
+</div>
+</div>
+<div class="cell border-box-sizing text_cell rendered"><div class="prompt input_prompt">
+</div>
+<div class="inner_cell">
+<div class="text_cell_render border-box-sizing rendered_html">
+<p>例えば<br>
+'apple' 'banana' 'orange'<br>
+が与えられた時は</p>
+
+</div>
+</div>
+</div>
 <div class="cell border-box-sizing code_cell rendered">
 <div class="input">
-<div class="prompt input_prompt">In&nbsp;[6]:</div>
+<div class="prompt input_prompt">In&nbsp;[10]:</div>
 <div class="inner_cell">
     <div class="input_area">
 <div class=" highlight hl-ipython3"><pre><span></span><span class="n">ls</span> <span class="o">=</span> <span class="nb">list</span><span class="p">(</span><span class="nb">input</span><span class="p">()</span><span class="o">.</span><span class="n">split</span><span class="p">())</span>
@@ -12181,12 +12416,22 @@ list(map(int,input().split()))
 </div>
 </div>
 
-</div>'apple'
-'banana'
-'orange'
+</div>
+<div class="cell border-box-sizing text_cell rendered"><div class="prompt input_prompt">
+</div>
+<div class="inner_cell">
+<div class="text_cell_render border-box-sizing rendered_html">
+<p>１行ごと<br>
+'apple'<br>
+'banana'<br>
+'orange'</p>
+
+</div>
+</div>
+</div>
 <div class="cell border-box-sizing code_cell rendered">
 <div class="input">
-<div class="prompt input_prompt">In&nbsp;[7]:</div>
+<div class="prompt input_prompt">In&nbsp;[11]:</div>
 <div class="inner_cell">
     <div class="input_area">
 <div class=" highlight hl-ipython3"><pre><span></span><span class="n">ls</span> <span class="o">=</span> <span class="p">[</span><span class="nb">input</span><span class="p">()</span> <span class="k">for</span> <span class="n">i</span> <span class="ow">in</span> <span class="nb">range</span><span class="p">(</span><span class="mi">3</span><span class="p">)]</span>
