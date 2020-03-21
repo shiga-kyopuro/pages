@@ -4,6 +4,7 @@
         <meta charset="utf-8">
         <meta name="viewport" content="width=device-width">
         <script src="http://code.jquery.com/jquery-1.11.1.min.js"></script>
+        <script src="script.js"></script>
         <link rel="stylesheet" type="text/css" media="only screen and (max-device-width:897px)" href="phone-home.css"/>
         <link rel="stylesheet" type="text/css" media="screen and (min-device-width:898px)" href="home.css" />
     </head>
@@ -58,16 +59,5 @@
                 document.write(date.getFullYear()+'  滋賀大学競技プログラミングサークル')
             </script>
         </footer>
-        <script>
-            var width = window.innerWidth;
-            if(true){
-                window.onload = function() {
-                    $(".nav").css("display","none");
-                    $(".menu_button").on("click", function() {
-                        $(".nav").slideToggle();
-                    });
-                };
-            }
-        </script>
     </body>
 </html>
