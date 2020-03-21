@@ -10,7 +10,7 @@
     <body>
         <header>
             <script>
-                if(navigator.userAgent.match(/(iPhone|iPad|iPod|Android)/)){
+                if(window.matchMedia( "(max-width: 480px)" ).matches){
                     $(function() {
                     $(".nav").css("display","none");
                     $(".menu_button").on("click", function() {
