@@ -9,16 +9,6 @@
     </head>
     <body>
         <header>
-            <script>
-                if(window.matchMedia( "(max-width: 480px)" ).matches){
-                    $(function() {
-                    $(".nav").css("display","none");
-                    $(".menu_button").on("click", function() {
-                    $(".nav").slideToggle();
-                    });
-                });
-                }
-            </script>
             <div class="menu_button"><span>menu</span></div>
             <nav class="nav" id="menu">
                 <ul>
@@ -35,7 +25,7 @@
         <!--<div class="imgspace">-->
             <img class="topimg" src="mainpic.jpg">
         <!--</div>-->
-        <div class="left"></div>
+        <div class="left" id = "manko"></div>
         <div class="mid">
             <h2>滋賀大学競技プログラミングサークル新設しました！</h2>
             <article>
@@ -68,5 +58,24 @@
                 document.write(date.getFullYear()+'  滋賀大学競技プログラミングサークル')
             </script>
         </footer>
+        <script>
+            if(window.matchMedia( "(max-width: 480px)" ).matches){
+                $(function() {
+                    $(".nav").css("display","none");
+                    $(".menu_button").on("click", function() {
+                        $(".nav").slideToggle();
+                    });
+                });
+                // img要素を生成
+                var img = document.createElement('img');
+                // 画像パスを追加
+                img.src = 'sumiline.jpg';
+                // altを追加
+                img.alt = '風景の画像です。';
+                
+                // 生成したimg要素を追加する
+                document.getElementById('manko').appendChild(img);
+            }
+        </script>
     </body>
 </html>
