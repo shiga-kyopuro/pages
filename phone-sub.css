@@ -1,52 +1,61 @@
+body{
+    margin: 0px;
+}
 header{
-    min-height: 50px;
-    min-width: 964px;
-    border-color: #080808;
-    background-color: #222;
-    position: sticky;
-    top: 0;
-    border-width: 0 0 1px;
-    position: fixed;
-    right: 0;
-    left: 0;
-}
-.menu{
     height: 40px;
-    min-width: 270px;
-}
-#target{
-    width: 150px;
-    height: 50px;
-    display: block;
-    float: left;
-    background-color: #222;
-    color: azure;
-}
-#this{
-    width: 150px;
-    height: 50px;
-    display: block;
-    float: left;
-    background-color: gray;
-    color: azure;
-}
-.menu div a{
-    text-align: center;
-    line-height:50px;
+    z-index: 1000;
+    position: fixed;
+    background-color: white;
+    color: black;
     width: 100%;
+}
+
+header nav {
+    position: absolute;
+    top: 100%;
+}
+
+header .menu_button {
+    border-left: solid 1px black;
+    float: right;
+    width: 70px;
     height: 100%;
-    display: block;
-    text-decoration: none;
-    color: azure;
+    text-align: center;
+}
+header .menu_button span {
+    line-height: 40px;
+}
+header nav {
+    background-color: white;
+    color: black;
+    width: 100%;
+}
+header nav ul {
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+}
+header nav ul li:first-child {
+    border-top: solid 1px black;
+}
+header nav ul li {
+    border-bottom: dotted 1px black;
+    text-align: center;
+    padding: 1em;
 }
 
 .space{
-    height: 42px;
+    height: 30px;
+}
+
+img{
+    display: block;
+    /*width: 100%;*/
 }
 
 .mid{
     display: block;
-    height: 600px;
+    /*height: 900px;*/
     width: 80%;
     margin: auto;
 }
@@ -57,11 +66,13 @@ header{
 
 .right{
     display: block;
-    height: 600px;
-    width: 70%;
+    height: 350px;
+    width: 90%;
     margin: auto;
     border: 1px solid black;
 }
+
+
 
 footer{
     display: block;

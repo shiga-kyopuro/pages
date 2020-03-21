@@ -1,20 +1,35 @@
 <html>
     <head>
-        <title>活動内容</title>
+        <title>滋賀大学競技プログラミングサークル</title>
         <meta charset="utf-8">
+        <meta name="viewport" content="width=device-width">
+        <script src="http://code.jquery.com/jquery-1.11.1.min.js"></script>
         <link rel="stylesheet" type="text/css" media="only screen and (max-device-width:480px)" href="phone-sub.css"/>
         <link rel="stylesheet" type="text/css" media="screen and (min-device-width:481px)" href="sub.css" />
     </head>
     <body>
         <header>
-            <div class="menu">
-                <div id="target" onmouseover="over(this)" onmouseleave="leave(this)"><a href="index.html">HOME</a></div>
-                <div id="target" onmouseover="over(this)" onmouseleave="leave(this)"><a href="競プロとは？.html">競プロってなんぞ？</a></div>
-                <div id="this"><a href="活動内容.html">活動内容</a></div>
-                <div id="target" onmouseover="over(this)" onmouseleave="leave(this)"><a href="メンバー.html">連絡先</a></div>
-                <div id="target" onmouseover="over(this)" onmouseleave="leave(this)"><a href="https://github.com/shiga-kyopuro">GitHub</a></div>
-                <div id="target" onmouseover="over(this)" onmouseleave="leave(this)"><a href="活動報告.html">活動報告</a></div>
-            </div>
+            <script>
+                if(navigator.userAgent.match(/(iPhone|iPad|iPod|Android)/)){
+                    $(function() {
+                    $(".nav").css("display","none");
+                    $(".menu_button").on("click", function() {
+                    $(".nav").slideToggle();
+                    });
+                });
+                }
+            </script>
+            <div class="menu_button"><span>menu</span></div>
+            <nav class="nav" id="menu">
+                <ul>
+                <li id='this'><a class = "atag" href="index.html">HOME</a></li>
+                <li id="target"><a class = "atag" href="競プロとは？.html">競プロとは？</a></li>
+                <li id="target"><a class = "atag" href="活動内容.html">活動内容</a></li>
+                <li id="target"><a class="atag" href="メンバー.html">連絡先</a></li>
+                <li id="target"><a class="atag" href="https://github.com/shiga-kyopuro">GitHub</a></li>
+                <li id="target"><a class="atag" href="活動報告.html">活動報告</a></li>
+                </ul>
+            </nav>
         </header>
         <div class="space"></div>
         <div class="left"></div>
@@ -25,23 +40,23 @@
             </article>
             <h2>活動内容</h2>
             <article>
-                勉強会をできるといいなと思っています。しかし、勉強会をしようにも解説スライドを作れる人材がいないので集まって各々<!--
-            -->自分の勉強を行うか、<a href="https://atcoder.jp/" target="_blank">atcoder</a>を使ってバーチャルコンテストを行うのどちらかになると思います。<!--
-            -->同じ趣味の仲間と交流する機会だと思って参加していただけたらいいなあと思っています。活動予定は<a href="https://twitter.com/shiga_kyopuro" target="_blank">twitter</a><!--
+                勉強会をできるといいなと思っています。去年ある程度参加してある程度知識ある人々はネットのアルゴリズム関係のコンテンツを<!--
+            -->読もうということろです。新入生など初めてだよって方がいたら別にゆっくり教える機会を設けます。また、<a href="https://atcoder.jp/" target="_blank">atcoder</a>を使ってバーチャルコンテストができたらいいなあと思います。<!--
+            -->同じ趣味の仲間と交流する機会を今年は作っていけるといいなあと考えています。活動予定は<a href="https://twitter.com/shiga_kyopuro" target="_blank">twitter</a><!--
             -->にて随時ツイートするので内容に興味ある方いましたらメンバーでなくても参加いただけます。<!--
-            -->（競プロだけでなく他のコンピューターの技術に関する活動も行う予定です。）
+            --><s>（競プロだけでなく他のコンピューターの技術に関する活動も行う予定です。）</s>(あんまり意識高くいくと辛くなる<!--
+            -->のでできる範囲のことをできる範囲でやります。)
             </article>
             <h2>部費</h2>
             <article>
                 ないです。少なくとも月いくらって感じで部費は回収しません。このサイトも無料でコードを公開できる仕組みを使っているので<!--
             -->HP代だせーとは言いません。こんな感じで極力お金かからないようにやっていこうかなと思っています。<!--
             -->なんやかんやでこの界隈、有志の方が作ってくれたシステムとか結構あるのであんまお金かからないと思います。<!--
-            -->めちゃくちゃありがたいです。イベントに参加する場合の費用は<!--
-            -->実費になると思います。
+            -->めちゃくちゃありがたいです。
             </article>
         </div>
         <div class="right">
-                <a class="twitter-timeline" height="600px" href="https://twitter.com/shiga_kyopuro?ref_src=twsrc%5Etfw">Tweets by shiga_kyopuro</a> <script async src="https://platform.twitter.com/widgets.js" charset="utf-8"></script>
+                <a class="twitter-timeline" height="100%" href="https://twitter.com/shiga_kyopuro?ref_src=twsrc%5Etfw">Tweets by shiga_kyopuro</a> <script async src="https://platform.twitter.com/widgets.js" charset="utf-8"></script>
         </div>
         <footer>
             <script type='text/javascript'>

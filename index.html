@@ -2,24 +2,39 @@
     <head>
         <title>滋賀大学競技プログラミングサークル</title>
         <meta charset="utf-8">
+        <meta name="viewport" content="width=device-width">
+        <script src="http://code.jquery.com/jquery-1.11.1.min.js"></script>
         <link rel="stylesheet" type="text/css" media="only screen and (max-device-width:480px)" href="phone-home.css"/>
         <link rel="stylesheet" type="text/css" media="screen and (min-device-width:481px)" href="home.css" />
     </head>
     <body>
         <header>
-            <div class="menu">
-                <div id='this'><a href="index.html">HOME</a></div>
-                <div id="target" onmouseover="over(this)" onmouseleave="leave(this)"><a href="競プロとは？.html">競プロってなんぞ？</a></div>
-                <div id="target" onmouseover="over(this)" onmouseleave="leave(this)"><a href="活動内容.html">活動内容</a></div>
-                <div id="target" onmouseover="over(this)" onmouseleave="leave(this)"><a href="メンバー.html">連絡先</a></div>
-                <div id="target" onmouseover="over(this)" onmouseleave="leave(this)"><a href="https://github.com/shiga-kyopuro">GitHub</a></div>
-                <div id="target" onmouseover="over(this)" onmouseleave="leave(this)"><a href="活動報告.html">活動報告</a></div>
-            </div>
+            <script>
+                if(navigator.userAgent.match(/(iPhone|iPad|iPod|Android)/)){
+                    $(function() {
+                    $(".nav").css("display","none");
+                    $(".menu_button").on("click", function() {
+                    $(".nav").slideToggle();
+                    });
+                });
+                }
+            </script>
+            <div class="menu_button"><span>menu</span></div>
+            <nav class="nav" id="menu">
+                <ul>
+                <li id='this'><a class = "atag" href="index.html">HOME</a></li>
+                <li id="target"><a class = "atag" href="競プロとは？.html">競プロとは？</a></li>
+                <li id="target"><a class = "atag" href="活動内容.html">活動内容</a></li>
+                <li id="target"><a class="atag" href="メンバー.html">連絡先</a></li>
+                <li id="target"><a class="atag" href="https://github.com/shiga-kyopuro">GitHub</a></li>
+                <li id="target"><a class="atag" href="活動報告.html">活動報告</a></li>
+                </ul>
+            </nav>
         </header>
         <div class="space"></div>
-        <div class="imgspace">
-            <img src="mainpic.jpg">
-        </div>
+        <!--<div class="imgspace">-->
+            <img class="topimg" src="mainpic.jpg">
+        <!--</div>-->
         <div class="left"></div>
         <div class="mid">
             <h2>滋賀大学競技プログラミングサークル新設しました！</h2>
@@ -36,14 +51,15 @@
                 -->経験とかは全然いりません。やる気はあるとうれしいです。<br>
                 連絡先はこちら→<a href="メンバー.html">お問い合わせ</a>
             </article>
-            <h2>これまでの実績</h2>
+            <h2>昨年の活動</h2>
             <article>
-                できてすぐのサークルに実績を聞くんじゃねえ。てめえの胸に聞け！！<br>
-                実績ができたらここに書き込んでいきましょうねー
+                昨年にサークルとしての活動はICPC(国際大学プログラミングコンテスト)の予選(予選落ち)とPG BATTLE 2019<!--
+                -->に参加しました。また、勉強会を企画していましたが企画倒れしました。2020年度は成功させたいです。<!--
+                -->また、ほぼ毎週のatcoderのあとにLINEでガヤガヤしてます。
             </article>
         </div>
         <div class="right">
-                <a class="twitter-timeline" height="600px" href="https://twitter.com/shiga_kyopuro?ref_src=twsrc%5Etfw">Tweets by shiga_kyopuro</a> <script async src="https://platform.twitter.com/widgets.js" charset="utf-8"></script>
+            <a class="twitter-timeline" height = "100%" href="https://twitter.com/shiga_kyopuro?ref_src=twsrc%5Etfw">Tweets by shiga_kyopuro</a> <script async src="https://platform.twitter.com/widgets.js" charset="utf-8"></script>
         </div>
         
         <footer>
@@ -52,14 +68,5 @@
                 document.write(date.getFullYear()+'  滋賀大学競技プログラミングサークル')
             </script>
         </footer>
-        <script type="text/javascript">
-            function over(x) {
-                x.style.backgroundColor = "gray";
-            }
- 
-            function leave(x) {
-                x.style.backgroundColor = "#222";
-            }
-        </script>
     </body>
 </html>

@@ -4,8 +4,8 @@ body{
 header{
     min-height: 50px;
     min-width: 964px;
-    border-color: #080808;
-    background-color: #222;
+    border-color:white;
+    background-color: white;
     position: sticky;
     top: 0;
     border-width: 0 0 1px;
@@ -13,16 +13,29 @@ header{
     right: 0;
     left: 0;
 }
-.menu{
-    height: 50px;
-    min-width: 270px;
+
+header div{
+    visibility: hidden;
 }
-#target{
+
+#menu{
+    height: 50px;
+    min-width: 480px;
+    text-align: center;
+    background-color: white;
+}
+
+#menu ul{
+    list-style: none;
+}
+
+#menu li{
     width: 150px;
     height: 50px;
-    display: block;
     float: left;
-    background-color: #222;
+    /*display: block;
+    float: left;
+    background-color: #222;*/
     color: azure;
 }
 #this{
@@ -30,17 +43,18 @@ header{
     height: 50px;
     display: block;
     float: left;
-    background-color: gray;
+    background-color: azure;
     color: azure;
 }
-.menu div a{
-    text-align: center;
-    line-height:50px;
-    width: 100%;
-    height: 100%;
-    display: block;
+.atag {
+	display: inline-block;
+	padding: 0.1em 0.3em;
+    transition: all .3s;
     text-decoration: none;
-    color: azure;
+}
+.atag:hover {
+	color: #fff;
+	background-color: #00BCD4;
 }
 
 .space{
@@ -56,9 +70,10 @@ header{
     border-width: 0 0 0 0;
     margin: 0;
 }
-.imgspace img{
-    height: 620px;
+.topimg{
+    /*height: 620px;*/
     width: 100%;
+    max-width: 1300px;
 }
 
 .left{
@@ -86,6 +101,7 @@ header{
     width: 25%;
     border: #222 1px;
 }
+
 
 footer{
     text-align: center;
