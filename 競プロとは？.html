@@ -3,22 +3,13 @@
         <title>滋賀大学競技プログラミングサークル</title>
         <meta charset="utf-8">
         <meta name="viewport" content="width=device-width">
-        <script src="http://code.jquery.com/jquery-1.11.1.min.js"></script>
+        <script src="jquery-1.11.1.min.js"></script>
+        <script src="script.js"></script>
         <link rel="stylesheet" type="text/css" media="only screen and (max-device-width:480px)" href="phone-sub.css"/>
         <link rel="stylesheet" type="text/css" media="screen and (min-device-width:481px)" href="sub.css" />
     </head>
     <body>
         <header>
-            <script>
-                if(window.matchMedia( "(max-width: 480px)" )){
-                    $(function() {
-                    $(".nav").css("display","none");
-                    $(".menu_button").on("click", function() {
-                    $(".nav").slideToggle();
-                    });
-                });
-                }
-            </script>
             <div class="menu_button"><span>menu</span></div>
             <nav class="nav" id="menu">
                 <ul>
